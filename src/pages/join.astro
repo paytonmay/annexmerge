@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+import { PLACES } from '../lib/places';
+---
+
+<Base
+  title="Join: Claim Your Place for One Big Sandy"
+  description="Add your name and your community to the running count of neighbors who want a stronger, united Big Sandy region. Every signup lights up a place on the map."
+>
+  <div class="wrap">
+    <article class="prose">
+      <h1>Claim your place</h1>
+      <p class="lede">
+        The strongest argument for one city is a count of neighbors who want
+        it, community by community. Add yours. We'll send occasional project
+        updates and never share your email.
+      </p>
+
+      <p id="joined-msg" class="callout callout-green" hidden>
+        <strong>You're counted.</strong> Thank you. Tell one neighbor, and
+        watch the count grow on the home page.
+      </p>
+      <p id="error-msg" class="callout" hidden></p>
+
+      <form class="join-form" method="POST" action="/api/signup">
+        <div class="field">
+          <label for="first_name">First name (optional)</label>
+          <input
+            id="first_name"
+            name="first_name"
+            type="text"
+            maxlength="80"
+            autocomplete="given-name"
+          />
+        </div>
+
+        <div class="field">
+          <label for="email">Email (required)</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            maxlength="254"
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="field">
+          <label for="place">Where do you call home? (required)</label>
+          <select id="place" name="place" required>
+            <option value="" disabled selected>Choose your community</option>
+            {PLACES.map((p) => (
+              <option value={p}>{p}</option>
+            ))}
+          </select>
+        </div>
+
+        <div class="field field-check">
+          <input id="public_ok" name="public_ok" type="checkbox" />
+          <label for="public_ok">
+            You may list my first name publicly as a supporter
+          </label>
+        </div>
+
+        <p class="honeypot" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </p>
+
+        <button class="btn" type="submit">Count me in</button>
+      </form>
+
+      <p class="source-note">
+        Privacy, plainly: we store your name, email, community, and signup
+        date, and use them only to count support and send project updates.
+        No selling, no sharing, and you can ask to be removed anytime. One
+        signup per email; signing up again just updates your entry.
+      </p>
+    </article>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    if (params.get('joined') === '1') {
+      document.getElementById('joined-msg')!.hidden = false;
+      document.querySelector('.join-form')?.setAttribute('hidden', '');
+    }
+    const error = params.get('error');
+    if (error) {
+      const messages: Record<string, string> = {
+        invalid: 'Please check your email address and choose your community.',
+        rate: 'Too many signups from this connection. Try again in an hour.',
+        server: 'Something went wrong on our end. Please try again shortly.',
+      };
+      const el = document.getElementById('error-msg')!;
+      el.textContent = messages[error] ?? messages.server;
+      el.hidden = false;
+    }
+  </script>
+</Base>

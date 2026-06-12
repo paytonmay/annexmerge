@@ -22,3 +22,4 @@ Key facts (verified against primary sources; see /sources):
 - [Precedents](/precedents/): Lexington, Louisville, Princeton NJ, and the honest odds
 - [FAQ](/faq/): Taxes, schools, local identity, and who actually decides
 - [Sources](/sources/): All citations: statutes, Census data, and academic research
+- [Join](/join/): Claim your place: a per-community running count of residents supporting the idea

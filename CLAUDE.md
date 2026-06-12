@@ -22,8 +22,15 @@ auto-deploy.
 
 ## Tech notes
 
-- Zero client-side JavaScript. Animations are CSS only and must respect
-  prefers-reduced-motion.
+- Zero client-side JavaScript on content pages, with two narrow exceptions:
+  the supporter counter (home) and the join-page status messages. Animations
+  are CSS only and must respect prefers-reduced-motion.
+- Signups backend: Neon Postgres via @neondatabase/serverless, accessed only
+  from /api/* endpoints (signup, counts, export). Pages are prerendered; the
+  endpoints set `prerender = false` and run as Vercel functions.
+- Secrets live in .env (gitignored, template in .env.example) and Vercel
+  encrypted env vars: DATABASE_URL, ADMIN_EXPORT_TOKEN. NEVER hardcode them.
+  Schema setup: node --env-file=.env scripts/setup-db.mjs
 - Mobile-first CSS in src/styles/global.css (vanilla, custom properties).
 - SEO/LLM surface: per-page titles + meta descriptions, canonical URLs,
   JSON-LD via the Base layout `schema` prop, @astrojs/sitemap,

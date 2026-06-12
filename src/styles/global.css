@@ -317,6 +317,89 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .source-list li { margin-bottom: 0.7rem; overflow-wrap: anywhere; }
 .source-note { font-size: 0.9rem; color: var(--ink-soft); }
 
+/* ---------- Join form ---------- */
+.join-form {
+  max-width: 28rem;
+  margin: 1.5rem 0;
+}
+
+.field {
+  margin-bottom: 1.1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.field input[type='text'],
+.field input[type='email'],
+.field select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  border: 1.5px solid var(--rule);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid var(--green-600);
+  outline-offset: 1px;
+}
+
+.field-check {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.field-check input {
+  margin-top: 0.3rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.field-check label {
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  overflow: hidden;
+}
+
+.count-band {
+  background: var(--green-800);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.count-band .count-num {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  font-weight: 700;
+  color: var(--gold-500);
+  line-height: 1.1;
+}
+
+.count-band p {
+  color: var(--green-100);
+  margin: 0.4rem 0 1rem;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--green-900);

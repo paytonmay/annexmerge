@@ -18,8 +18,8 @@ import CorridorMap from '../components/CorridorMap.astro';
         than 14,000 people, built step by step, with voters deciding every
         step.
       </p>
-      <a class="btn" href="/the-plan/">Read the plan</a>
-      <a class="btn btn-ghost" href="/the-case/">See the evidence</a>
+      <a class="btn" href="/join/">Claim your place</a>
+      <a class="btn btn-ghost" href="/the-plan/">Read the plan</a>
     </div>
   </div>
 
@@ -151,6 +151,31 @@ import CorridorMap from '../components/CorridorMap.astro';
           cited. <a href="/faq/">Start with the questions everyone asks.</a>
         </p>
       </div>
+
+      <div class="count-band">
+        <span class="count-num" id="supporter-count" aria-live="polite">&nbsp;</span>
+        <p id="supporter-label">Neighbors are signing up, community by community.</p>
+        <a class="btn" href="/join/">Claim your place</a>
+      </div>
     </section>
   </div>
+
+  <script>
+    fetch('/api/counts')
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then(({ total }) => {
+        if (typeof total !== 'number') return;
+        document.getElementById('supporter-count')!.textContent =
+          total.toLocaleString('en-US');
+        document.getElementById('supporter-label')!.textContent =
+          total === 1
+            ? 'neighbor has claimed their place so far.'
+            : 'neighbors have claimed their place, community by community.';
+      })
+      .catch(() => {
+        const el = document.getElementById('supporter-count')!;
+        el.textContent = 'Join the count';
+        el.classList.remove('count-num');
+      });
+  </script>
 </Base>
