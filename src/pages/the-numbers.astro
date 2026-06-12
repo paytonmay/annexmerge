@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'The Numbers: Verified Populations, Budgets, and Tax Rates in the Big Sandy Corridor',
+  description:
+    'Audited city finances, 2025 tax rates, and Census populations for Pikeville, Coal Run Village, Prestonsburg, and Allen, Kentucky. The real harmonization gap a merger would need to bridge.',
+  about: ['Municipal finance', 'Tax rates', 'Pikeville Kentucky', 'Prestonsburg Kentucky'],
+};
+---
+
+<Base
+  title="The Numbers: Populations, Budgets, and Tax Rates, Verified"
+  description="Verified 2025 data: Pikeville taxes 14.6 cents per $100 with no insurance premium tax; Coal Run Village has zero property tax; Prestonsburg charges 21 cents plus 8%. The real harmonization picture."
+  schema={[articleSchema]}
+>
+  <div class="wrap">
+    <article class="prose">
+      <h1>The Numbers</h1>
+      <p class="lede">
+        Most consolidation arguments stay vague about money. This page does
+        the opposite. Every figure below comes from an audited financial
+        statement, an official state rate book, or the U.S. Census, and the
+        gaps where we couldn't verify a number are marked as exactly that.
+      </p>
+
+      <h2>Who lives here</h2>
+      <div class="table-scroll">
+        <table>
+          <caption>2020 Census populations (KY Department for Local Government profiles, confirmed against Census Bureau counts)</caption>
+          <thead>
+            <tr>
+              <th scope="col">City</th>
+              <th scope="col" class="num">Population</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Pikeville</th><td class="num">7,754</td></tr>
+            <tr><th scope="row">Prestonsburg</th><td class="num">3,681</td></tr>
+            <tr><th scope="row">Coal Run Village</th><td class="num">1,669</td></tr>
+            <tr><th scope="row"><strong>Three cities combined</strong></th><td class="num"><strong>13,104</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Add Allen and the six unincorporated communities along US-23 (Broad
+        Bottom, Harold, Betsy Layne, Stanville, Ivel, and Dwale) and the
+        corridor plausibly reaches the ~15,000 we cite on this site. We have
+        not yet verified those smaller populations, so until we do, treat
+        15,000 as a reasonable estimate and 13,104 as the hard floor.
+      </p>
+
+      <h2>The tax map, side by side</h2>
+      <p>
+        This is the harmonization gap a merger would eventually have to
+        bridge, from the official 2025 Kentucky Department of Revenue rate
+        book and the Department of Insurance 2025–2026 premium tax schedule:
+      </p>
+      <div class="table-scroll">
+        <table>
+          <caption>City tax rates, 2025 (official state schedules)</caption>
+          <thead>
+            <tr>
+              <th scope="col">City</th>
+              <th scope="col" class="num">Real property (per $100)</th>
+              <th scope="col" class="num">Insurance premium tax</th>
+              <th scope="col">Occupational / payroll tax</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Coal Run Village</th>
+              <td class="num">0¢</td>
+              <td class="num">4%</td>
+              <td>Not yet verified</td>
+            </tr>
+            <tr>
+              <th scope="row">Pikeville</th>
+              <td class="num">14.6¢</td>
+              <td class="num">0%</td>
+              <td>2% wages + 2% net profits</td>
+            </tr>
+            <tr>
+              <th scope="row">Prestonsburg</th>
+              <td class="num">21¢</td>
+              <td class="num">8%</td>
+              <td>Not yet verified</td>
+            </tr>
+            <tr>
+              <th scope="row">Allen</th>
+              <td class="num">23¢</td>
+              <td class="num">6%</td>
+              <td>Not yet verified</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-note">
+        Details: Coal Run Village levies no city property tax on any class.
+        Pikeville does not appear on the state insurance premium schedule at
+        all, meaning no premium tax is on file. Prestonsburg's tangible rate
+        is 21.79¢ and its premium tax exempts life insurance; Coal Run's
+        exempts health. Rates reset annually.
+      </p>
+
+      <div class="callout">
+        <span class="callout-title">Read the gap honestly, in both directions</span>
+        <p>
+          Yes, the spread is real: 0¢ to 23¢ on property, 0% to 8% on
+          insurance premiums. But notice which way it leans. The biggest city
+          in the corridor has the <em>lowest</em> property-and-insurance
+          burden of the three larger towns. Harmonizing toward
+          Pikeville-style rates would mean lower property taxes in
+          Prestonsburg and Allen and lower insurance premium taxes nearly
+          everywhere, while Coal Run Village (which currently pays no
+          property tax at all) would need negotiated terms, which is exactly
+          why its voters hold a veto. We are not promising any particular
+          rates. We are showing you the actual starting positions, because
+          merger terms get negotiated in public before anyone votes.
+        </p>
+      </div>
+
+      <h2>What actually funds a city here</h2>
+      <p>
+        Pikeville's audited FY2024 statements answer a question most people
+        get wrong. The city's General Fund took in about $22.5 million, and
+        the engine is not property tax:
+      </p>
+      <ul>
+        <li>
+          <strong>$12.2 million (about 57%)</strong> came from the 2%
+          occupational tax on wages earned and business profits made inside
+          the city.
+        </li>
+        <li>
+          <strong>Just $1.1 million</strong> came from property taxes. The
+          occupational tax out-earns it eleven to one.
+        </li>
+      </ul>
+      <p>
+        That is the fiscal heart of the whole regional case: a city here is
+        funded by <em>jobs located inside its limits</em>, not by taxing
+        homes. Every employer that lands anywhere in a unified city funds
+        services for everyone in it. Under separate governments, a hospital
+        expansion in Pikeville does nothing for Prestonsburg's budget, and a
+        plant siting in Prestonsburg does nothing for Pikeville's. One city
+        makes every job a shared win.
+      </p>
+
+      <h2>Debt and pensions, on the table</h2>
+      <p>
+        Merger skeptics rightly ask about inherited obligations, so here is
+        Pikeville's audited position at June 30, 2024: total debt of $31.8
+        million (about $24.3 million of it bonds) and a net CERS pension
+        liability of $12.1 million. Comparable audited figures for
+        Prestonsburg, Coal Run Village, and Allen are not yet public-web
+        verifiable, and we won't guess. Publishing all four cities'
+        positions side by side, from their audits, is a prerequisite for any
+        merger conversation, and it's at the top of our research list.
+      </p>
+
+      <h2>Schools: now confirmed by statute</h2>
+      <p>
+        We can now state this as law, not assurance. Under KRS 160.045,
+        moving territory between school districts is its own separate
+        process: it requires a petition of 75% of affected voters or action
+        by the school boards themselves, plus agreement of both boards.
+        KRS 160.020 fixes independent districts to a state registry that
+        does not follow city limits. And Kentucky's courts settled the
+        principle decades ago: in <em>Thomas v. Spragens</em> (1948), the
+        Court of Appeals held that a city annexation did not extend the
+        city's school district. City consolidation would leave Pikeville
+        Independent, Pike County, and Floyd County school districts exactly
+        where they are.
+      </p>
+
+      <h2>What we still can't show you</h2>
+      <p>
+        Honesty requires the gap list. Not yet verified: budgets, debt,
+        pensions, and occupational tax rates for Prestonsburg, Coal Run
+        Village, and Allen; populations for Allen and the six unincorporated
+        corridor communities; school enrollments; and a full inventory of
+        existing shared services (the corridor already cooperates through
+        the Big Sandy Area Development District, regional water
+        arrangements, and joint 911 work, and documenting those is next).
+        Every gap that closes will be published here, whichever way the
+        numbers point.
+      </p>
+
+      <p>
+        Full citations for everything above are on the
+        <a href="/sources/">Sources page</a>.
+      </p>
+    </article>
+  </div>
+</Base>

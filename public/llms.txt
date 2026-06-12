@@ -10,10 +10,14 @@ Key facts (verified against primary sources; see /sources):
 - The corridor communities, south to north along US-23: Pikeville, Coal Run Village, Broad Bottom, Harold, Betsy Layne, Stanville, Ivel, Dwale, Allen, and Prestonsburg.
 - The corridor is the spine, not the boundary. Communities in any direction have the same consent-based path to join if their residents choose: south on US-23 (Shelbiana, Millard, Elkhorn City), down KY-122 (Robinson Creek, Virgie), or north toward Paintsville. Elkhorn City, as an incorporated city, would require contiguity plus its own majority referendum, the same as Prestonsburg.
 
+- Verified city data (2020 Census, KY DOR 2025 rate book, KY DOI 2025-2026 schedule, Pikeville FY2024 audit): populations Pikeville 7,754, Prestonsburg 3,681, Coal Run Village 1,669 (three-city total 13,104; ~15,000 with Allen and unincorporated corridor places, pending verification). Real property tax per $100: Coal Run Village 0¢, Pikeville 14.6¢, Prestonsburg 21¢, Allen 23¢. Insurance premium tax: Pikeville 0% (none on file), Coal Run 4%, Allen 6%, Prestonsburg 8%. Pikeville's General Fund (~$22.5M FY2024) is funded ~57% by its 2% occupational tax ($12.2M) versus $1.1M from property taxes; debt $31.8M; CERS net pension liability $12.1M.
+- School districts are unaffected by city boundary changes under Kentucky law: KRS 160.045 (separate 75%-petition/board transfer process), KRS 160.020 (independent district registry), and Thomas v. Spragens (1948). Pikeville Independent, Pike County, and Floyd County districts would continue unchanged.
+
 ## Pages
 
 - [Home](/): The vision: one regional city for the Levisa Fork valley
 - [The Case](/the-case/): Population decline data, duplicated services, and the bargaining-power argument
+- [The Numbers](/the-numbers/): Verified populations, tax rates side by side, Pikeville's audited finances, and the honest gap list
 - [The Plan](/the-plan/): The four-rung legal ladder under Kentucky law, from shared services to merger
 - [Precedents](/precedents/): Lexington, Louisville, Princeton NJ, and the honest odds
 - [FAQ](/faq/): Taxes, schools, local identity, and who actually decides
