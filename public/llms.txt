@@ -16,9 +16,9 @@ Key facts (verified against primary sources; see /sources):
 ## Pages
 
 - [Home](/): The vision: one regional city for the Levisa Fork valley
-- [The Case](/the-case/): Population decline data, duplicated services, and the bargaining-power argument
-- [The Numbers](/the-numbers/): Verified populations, tax rates side by side, Pikeville's audited finances, and the honest gap list
-- [The Plan](/the-plan/): The four-rung legal ladder under Kentucky law, from shared services to merger
+- [Case](/the-case/): Population decline data, duplicated services, and the bargaining-power argument
+- [Numbers](/the-numbers/): Verified populations, tax rates side by side, Pikeville's audited finances, and the honest gap list
+- [Plan](/the-plan/): The four-rung legal ladder under Kentucky law, from shared services to merger
 - [Precedents](/precedents/): Lexington, Louisville, Princeton NJ, and the honest odds
 - [FAQ](/faq/): Taxes, schools, local identity, and who actually decides
 - [Sources](/sources/): All citations: statutes, Census data, and academic research
