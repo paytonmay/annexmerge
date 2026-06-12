@@ -15,4 +15,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://annexmerge.vercel.app/sitemap-index.xml
+Sitemap: https://onebigsandy.org/sitemap-index.xml

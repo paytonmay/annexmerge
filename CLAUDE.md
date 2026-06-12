@@ -29,4 +29,5 @@ auto-deploy.
   JSON-LD via the Base layout `schema` prop, @astrojs/sitemap,
   public/llms.txt (keep it updated when pages change), public/robots.txt.
 - Site URL lives in astro.config.mjs `site` and public/robots.txt Sitemap
-  line. Currently the Vercel domain; update both when a custom domain lands.
+  line. Production domain: https://onebigsandy.org (bigsandy.city is also
+  registered and held in reserve).
