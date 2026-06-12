@@ -1,4 +1,4 @@
-# One City for the Big Sandy — all crawlers welcome, including AI assistants.
+# One City for the Big Sandy: all crawlers welcome, including AI assistants.
 User-agent: *
 Allow: /
 

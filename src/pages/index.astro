@@ -1,9 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import CorridorMap from '../components/CorridorMap.astro';
 ---
 
 <Base
-  title="One City for the Big Sandy — A Case for Regional Consolidation in Eastern Kentucky"
+  title="One City for the Big Sandy: A Case for Regional Consolidation in Eastern Kentucky"
   description="An honest, evidence-based case for uniting Pikeville, Coal Run Village, Prestonsburg, and the US-23 corridor into one regional Kentucky city of roughly 15,000 people."
 >
   <div class="hero">
@@ -12,9 +13,9 @@ import Base from '../layouts/Base.astro';
       <h1>One region. One future. One city.</h1>
       <p class="lede">
         Eastern Kentucky is losing people every year. Our towns can keep
-        shrinking separately — or grow together. This is the case for uniting
-        the Levisa Fork valley into a single regional city of roughly 15,000
-        people, built step by step, with voters deciding every step.
+        shrinking separately, or they can grow together. This is the case for
+        uniting the Levisa Fork valley into a single regional city of roughly
+        15,000 people, built step by step, with voters deciding every step.
       </p>
       <a class="btn" href="/the-plan/">Read the plan</a>
       <a class="btn btn-ghost" href="/the-case/">See the evidence</a>
@@ -22,10 +23,20 @@ import Base from '../layouts/Base.astro';
   </div>
 
   <div class="wrap">
+    <section>
+      <h2>One valley, already connected</h2>
+      <p class="prose">
+        Ten communities sit along a single 25-mile stretch of US-23 between
+        Pikeville and Prestonsburg. They share a river, a highway, a hospital
+        system, and a future. The only thing they don't share is a government.
+      </p>
+      <CorridorMap />
+    </section>
+
     <section class="prose">
-      <h2>The math is not on our side — alone</h2>
+      <h2>The math is not on our side, alone</h2>
       <p>
-        Pike County had 65,024 people in 2010. By 2020 it had 58,669 — and the
+        Pike County had 65,024 people in 2010. By 2020 it had 58,669, and the
         state's own projections put it below 48,000 by 2050. Floyd County is on
         track to lose nearly a third of its population over the same stretch.
         The decline is not hypothetical, and it is actually running
@@ -40,11 +51,11 @@ import Base from '../layouts/Base.astro';
       </li>
       <li class="stat">
         <span class="num">−30.5%</span>
-        <span class="label">Floyd County's projected loss over the same period — and 2020 came in worse than projected</span>
+        <span class="label">Floyd County's projected loss over the same period. The 2020 count came in worse than projected.</span>
       </li>
       <li class="stat">
         <span class="num">~15,000</span>
-        <span class="label">People a united corridor city would represent — versus separate towns of 1,700 to 7,700 today</span>
+        <span class="label">People a united corridor city would represent, versus separate towns of 1,700 to 7,700 today</span>
       </li>
     </ul>
 
@@ -54,12 +65,12 @@ import Base from '../layouts/Base.astro';
         This is not an argument about cutting budgets. It is an argument about
         <strong>bargaining power</strong>. A city of 15,000 competes for federal
         grants, infrastructure money, flood-recovery dollars, bond ratings, and
-        employers in a way that three separate small towns — each with its own
-        part-time capacity, each sometimes competing against its neighbors —
-        simply cannot. When Louisville and Jefferson County merged in 2003,
-        leaders did it for exactly this reason: a declining tax base and rival
-        development agencies recruiting against each other. One voice at the
-        table beats three quiet ones.
+        employers in a way that three separate small towns simply cannot, each
+        with limited capacity and each sometimes recruiting against its
+        neighbors. When Louisville and Jefferson County merged in 2003, leaders
+        did it for exactly this reason: a declining tax base and rival
+        development agencies competing for the same businesses. One voice at
+        the table beats three quiet ones.
       </p>
 
       <div class="callout">
@@ -69,7 +80,7 @@ import Base from '../layouts/Base.astro';
           and save millions. The research doesn't support that promise, so we
           won't make it. Academic studies of consolidated governments find
           mixed results on cost savings. The honest case is about
-          <strong>scale, growth, and a seat at the table</strong> — not budget
+          <strong>scale, growth, and a seat at the table</strong>, not budget
           cuts. <a href="/precedents/">We show you the full evidence, including
           the parts that cut against us.</a>
         </p>
@@ -87,8 +98,8 @@ import Base from '../layouts/Base.astro';
           <span class="rung-title">Shared services, starting now</span>
           <span class="rung-meta">Interlocal agreements · KRS 65.210–65.300 · no referendum required</span>
           Pikeville, Coal Run Village, and Prestonsburg can legally share
-          equipment, dispatch, purchasing, and even tax revenue today — across
-          county lines — while remaining fully independent cities.
+          equipment, dispatch, purchasing, and even tax revenue today, across
+          county lines, while remaining fully independent cities.
         </li>
         <li>
           <span class="rung-title">Grow along the corridor, by consent</span>
@@ -98,7 +109,7 @@ import Base from '../layouts/Base.astro';
           outright.
         </li>
         <li>
-          <span class="rung-title">Unite Pikeville and Coal Run Village — if voters say yes</span>
+          <span class="rung-title">Unite Pikeville and Coal Run Village, if voters say yes</span>
           <span class="rung-meta">City merger · KRS 81.410–81.440 · majority vote required in each city</span>
           The two cities already share a border. A merger happens only if a
           majority in Pikeville <em>and</em> a majority in Coal Run Village
@@ -116,7 +127,7 @@ import Base from '../layouts/Base.astro';
       <div class="callout callout-green">
         <span class="callout-title">A coalition, not an ambush</span>
         <p>
-          Nationally, consolidation votes fail far more often than they pass —
+          Nationally, consolidation votes fail far more often than they pass,
           and they fail fastest when one town feels steamrolled. That is why
           this project starts with conversation, shared wins, and public
           evidence, not a surprise referendum. Every number on this site is

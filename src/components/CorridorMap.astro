@@ -1,0 +1,171 @@
+---
+// The US-23/US-460 corridor, Pikeville to Prestonsburg, as an animated node
+// map. Pure SVG + CSS, no JavaScript. The pulse sweeps from Pikeville toward
+// Prestonsburg to suggest consolidation flowing up the valley.
+const places = [
+  { name: 'Pikeville', x: 80, y: 300, r: 14, city: true, anchor: 'start', ly: 332 },
+  { name: 'Coal Run Village', x: 152, y: 252, r: 9, city: true, anchor: 'middle', ly: 224 },
+  { name: 'Broad Bottom', x: 228, y: 244, r: 5, city: false, anchor: 'middle', ly: 276 },
+  { name: 'Harold', x: 302, y: 206, r: 5, city: false, anchor: 'middle', ly: 180 },
+  { name: 'Betsy Layne', x: 376, y: 212, r: 5, city: false, anchor: 'middle', ly: 244 },
+  { name: 'Stanville', x: 448, y: 176, r: 5, city: false, anchor: 'middle', ly: 150 },
+  { name: 'Ivel', x: 514, y: 162, r: 5, city: false, anchor: 'middle', ly: 194 },
+  { name: 'Dwale', x: 580, y: 134, r: 5, city: false, anchor: 'middle', ly: 108 },
+  { name: 'Allen', x: 642, y: 118, r: 7, city: true, anchor: 'middle', ly: 152 },
+  { name: 'Prestonsburg', x: 712, y: 72, r: 12, city: true, anchor: 'end', ly: 44 },
+];
+
+const pathD = places
+  .map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`)
+  .join(' ');
+---
+
+<figure class="corridor-map">
+  <svg
+    viewBox="0 0 800 360"
+    role="img"
+    aria-labelledby="corridor-map-title corridor-map-desc"
+  >
+    <title id="corridor-map-title">
+      Map of the US-23 corridor from Pikeville to Prestonsburg
+    </title>
+    <desc id="corridor-map-desc">
+      Ten communities shown as connected nodes along one valley: Pikeville,
+      Coal Run Village, Broad Bottom, Harold, Betsy Layne, Stanville, Ivel,
+      Dwale, Allen, and Prestonsburg.
+    </desc>
+
+    <path class="valley" d={pathD} />
+    <path class="flow" d={pathD} />
+
+    {places.map((p, i) => (
+      <g class="node" style={`--delay: ${i * 0.55}s`}>
+        <circle class="halo" cx={p.x} cy={p.y} r={p.r + 4} />
+        <circle
+          class={p.city ? 'dot dot-city' : 'dot'}
+          cx={p.x}
+          cy={p.y}
+          r={p.r}
+        />
+        <text
+          class={p.city ? 'label label-city' : 'label'}
+          x={p.x}
+          y={p.ly}
+          text-anchor={p.anchor}
+        >
+          {p.name}
+        </text>
+      </g>
+    ))}
+  </svg>
+  <figcaption>
+    One valley, ten communities: Pikeville, Coal Run Village, Broad Bottom,
+    Harold, Betsy Layne, Stanville, Ivel, Dwale, Allen, and Prestonsburg,
+    connected by US-23. Larger nodes are incorporated cities.
+  </figcaption>
+</figure>
+
+<style>
+  .corridor-map {
+    margin: 2.5rem 0;
+  }
+
+  .corridor-map svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  figcaption {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-top: 0.5rem;
+    max-width: var(--max-prose);
+  }
+
+  .valley {
+    fill: none;
+    stroke: var(--green-100);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .flow {
+    fill: none;
+    stroke: var(--green-600);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 6 18;
+    animation: flow 9s linear infinite;
+  }
+
+  .dot {
+    fill: #fff;
+    stroke: var(--green-600);
+    stroke-width: 3;
+  }
+
+  .dot-city {
+    fill: var(--green-800);
+    stroke: var(--green-800);
+  }
+
+  .halo {
+    fill: none;
+    stroke: var(--gold-500);
+    stroke-width: 2;
+    opacity: 0;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: pulse 5.5s ease-out infinite;
+    animation-delay: var(--delay);
+  }
+
+  .label {
+    font-size: 15px;
+    fill: var(--ink-soft);
+  }
+
+  .label-city {
+    font-size: 18px;
+    font-weight: 700;
+    fill: var(--green-900);
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    12% {
+      opacity: 0.9;
+    }
+    35% {
+      opacity: 0;
+      transform: scale(2.1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2.1);
+    }
+  }
+
+  @keyframes flow {
+    to {
+      stroke-dashoffset: -240;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .flow,
+    .halo {
+      animation: none;
+    }
+    .halo {
+      opacity: 0.35;
+      transform: scale(1);
+    }
+  }
+</style>
