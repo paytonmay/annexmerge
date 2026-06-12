@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+import { PLACES } from '../lib/places';
+
+const corridor = PLACES.slice(0, 16);
+const beyond = PLACES.slice(16);
+---
+
+<Base
+  title="Supporters: The Count, Community by Community"
+  description="A live, place-by-place count of Big Sandy neighbors who have signed up for the idea of one regional city. Claim your place and put your community on the board."
+>
+  <div class="wrap">
+    <article class="prose">
+      <h1>Supporters</h1>
+      <p class="lede">
+        This is the coalition, counted in public. One signup per email,
+        every community standing up for itself. Don't see your town on the
+        board yet? <a href="/join/">Be the first.</a>
+      </p>
+
+      <div class="count-band">
+        <span class="count-num" id="supporter-count" aria-live="polite">&nbsp;</span>
+        <p id="supporter-label">neighbors counted so far</p>
+        <a class="btn" href="/join/">Claim your place</a>
+      </div>
+
+      <h2>The corridor and the branches</h2>
+      <table class="supporters-table">
+        <thead>
+          <tr>
+            <th scope="col">Community</th>
+            <th scope="col" class="num">Signed up</th>
+            <th scope="col" class="bar-col"><span class="visually-hidden">Share</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {corridor.map((p) => (
+            <tr data-place={p}>
+              <th scope="row">{p}</th>
+              <td class="num count-cell">0</td>
+              <td class="bar-col"><span class="bar" style="width: 0%"></span></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2>And beyond</h2>
+      <table class="supporters-table">
+        <tbody>
+          {beyond.map((p) => (
+            <tr data-place={p}>
+              <th scope="row">{p}</th>
+              <td class="num count-cell">0</td>
+              <td class="bar-col"><span class="bar" style="width: 0%"></span></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <p class="source-note">
+        Counts update within a minute of each signup. One entry per email
+        address; duplicates never inflate the number. We publish the count
+        the same way we publish everything else here: so it can be checked.
+      </p>
+    </article>
+  </div>
+
+  <script>
+    fetch('/api/counts')
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then(({ total, places }) => {
+        if (typeof total !== 'number') return;
+        document.getElementById('supporter-count')!.textContent =
+          total.toLocaleString('en-US');
+        document.getElementById('supporter-label')!.textContent =
+          total === 1 ? 'neighbor counted so far' : 'neighbors counted so far';
+
+        const byPlace = new Map(
+          (places as { place: string; n: number }[]).map((p) => [p.place, p.n])
+        );
+        const max = Math.max(1, ...byPlace.values());
+        document.querySelectorAll<HTMLElement>('tr[data-place]').forEach((row) => {
+          const n = byPlace.get(row.dataset.place ?? '') ?? 0;
+          row.querySelector('.count-cell')!.textContent = n.toLocaleString('en-US');
+          (row.querySelector('.bar') as HTMLElement).style.width =
+            `${Math.round((n / max) * 100)}%`;
+        });
+      })
+      .catch(() => {
+        document.getElementById('supporter-count')!.textContent = '…';
+      });
+  </script>
+</Base>
