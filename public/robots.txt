@@ -1,0 +1,18 @@
+# One City for the Big Sandy — all crawlers welcome, including AI assistants.
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers are explicitly welcome. See /llms.txt for a guided summary.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://annexmerge.vercel.app/sitemap-index.xml

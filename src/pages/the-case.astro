@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'The Case for Consolidation in the Pikeville–Prestonsburg Corridor',
+  description:
+    'Population decline data, duplicated municipal services, and the bargaining-power argument for uniting the Levisa Fork valley of Eastern Kentucky.',
+  about: ['Municipal consolidation', 'Eastern Kentucky', 'Regionalism'],
+};
+---
+
+<Base
+  title="The Case — Why the Big Sandy Region Should Consolidate"
+  description="Pike and Floyd counties are projected to lose 26–30% of their population by 2050. The data behind the case for one regional city in Eastern Kentucky."
+  schema={[articleSchema]}
+>
+  <div class="wrap">
+    <article class="prose">
+      <h1>The Case</h1>
+      <p class="lede">
+        Three arguments, all grounded in public data: the people are leaving,
+        the structures are duplicated, and scale is the only honest answer.
+      </p>
+
+      <h2>1. The decline is real — and ahead of schedule</h2>
+      <p>
+        These are not activist numbers. They come from the Kentucky State Data
+        Center's official projections and the U.S. Census. In both counties,
+        the actual 2020 count came in <strong>below</strong> what the state
+        projected in 2012 — the decline is outrunning the forecasts.
+      </p>
+
+      <div class="table-scroll">
+        <table>
+          <caption>Population, actual and projected (KSDC via UK Cooperative Extension; U.S. Census 2020)</caption>
+          <thead>
+            <tr>
+              <th scope="col">County</th>
+              <th scope="col" class="num">2010 Census</th>
+              <th scope="col" class="num">2020 projected</th>
+              <th scope="col" class="num">2020 actual</th>
+              <th scope="col" class="num">2050 projected</th>
+              <th scope="col" class="num">Change 2010–2050</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Pike</th>
+              <td class="num">65,024</td>
+              <td class="num">61,991</td>
+              <td class="num"><strong>58,669</strong></td>
+              <td class="num">47,928</td>
+              <td class="num">−26.3%</td>
+            </tr>
+            <tr>
+              <th scope="row">Floyd</th>
+              <td class="num">39,451</td>
+              <td class="num">37,153</td>
+              <td class="num"><strong>35,942</strong></td>
+              <td class="num">27,400</td>
+              <td class="num">−30.5%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Note the bolded column: both counties lost people <em>faster</em> than
+        projected. The state's newer Vintage 2022 projection series anticipates
+        even steeper losses. Every year of separate, shrinking budgets makes
+        the next year's choices harder.
+      </p>
+
+      <h2>2. We pay for the same government several times over</h2>
+      <p>
+        Coal Run Village is home to roughly 1,700 people — about one-fifth the
+        size of Pikeville, which it borders directly. Yet it maintains its own
+        police chief and department, its own public works director, and its own
+        fire command structure, in parallel with Pikeville's departments a few
+        minutes away.
+      </p>
+      <p>
+        To be fair — and this site insists on being fair — Coal Run's fire
+        department is volunteer, so fire is not where the duplication costs
+        sit. But every separate administration means separate overhead,
+        separate procurement, separate grant applications, and separate
+        part-time capacity stretched over full-time problems. In a growing
+        region, that's a luxury. In a shrinking one, it's a leak.
+      </p>
+
+      <h2>3. Scale is bargaining power</h2>
+      <p>
+        Here is the heart of the case. Cities compete — for federal and state
+        grants, for infrastructure and flood-recovery dollars, for employers
+        deciding where to put jobs, and in the bond markets that price their
+        debt. In every one of those arenas, size and unity matter:
+      </p>
+      <ul>
+        <li>
+          <strong>Grants:</strong> a unified city applies once, with one
+          professional staff, instead of three towns filing competing or
+          partial applications for the same programs.
+        </li>
+        <li>
+          <strong>Economic development:</strong> when Louisville merged with
+          Jefferson County in 2003, a driving reason was that multiple
+          development organizations were fighting to recruit the same
+          businesses. Our corridor does the same thing at smaller scale today.
+        </li>
+        <li>
+          <strong>A regional identity:</strong> a ~15,000-person city anchored
+          by a regional hospital system and a university is a fundamentally
+          different pitch to an employer than a string of separate towns of
+          1,700 to 7,700.
+        </li>
+        <li>
+          <strong>Growth in any direction:</strong> a consolidated city is not
+          locked to one valley. It can annex and grow wherever its residents
+          and neighbors consent — an entity built to expand, in a region built
+          to contract.
+        </li>
+      </ul>
+
+      <div class="callout">
+        <span class="callout-title">What the case is not</span>
+        <p>
+          The case is <strong>not</strong> that consolidation cuts costs. The
+          best academic comparison of nine consolidated governments against
+          nine similar unconsolidated ones found no systematic efficiency
+          gains — only about half spent less than their comparisons. What that
+          same research did find was consistent evidence that consolidated
+          governments <em>outperformed on economic development</em> in the
+          decade after merging (a finding some other studies dispute — see
+          <a href="/precedents/">Precedents</a> for the full, honest picture).
+          We build the case on what holds up.
+        </p>
+      </div>
+
+      <h2>The choice</h2>
+      <p>
+        Nothing about the status quo is neutral. Staying separate is also a
+        choice — a choice to keep shrinking on three separate tracks, with
+        three separate overheads, three separate grant offices, and no unified
+        voice in Frankfort or Washington. The alternative is on
+        <a href="/the-plan/">the next page</a>: a four-rung ladder, every major
+        rung decided by voters.
+      </p>
+    </article>
+  </div>
+</Base>

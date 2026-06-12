@@ -1,0 +1,25 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/the-case/', label: 'The Case' },
+  { href: '/the-plan/', label: 'The Plan' },
+  { href: '/precedents/', label: 'Precedents' },
+  { href: '/faq/', label: 'FAQ' },
+  { href: '/sources/', label: 'Sources' },
+];
+
+const current = Astro.url.pathname.replace(/\/?$/, '/');
+---
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">One City for the Big Sandy</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      {links.map(({ href, label }) => (
+        <a href={href} aria-current={current === href ? 'page' : undefined}>
+          {label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+
+const faqs = [
+  {
+    q: 'Will my taxes go up?',
+    a: `Not because of anything in the early phases. Shared-services agreements (Rung 1) don't change anyone's tax rates, and annexation only brings city taxes where residents choose city services. In a full merger, tax rates would have to be harmonized, and the merger terms — negotiated publicly, before any vote — would spell out exactly how. We won't pretend to know those numbers before the cities' finances are publicly analyzed, and we won't promise tax cuts: the research on consolidation savings is mixed, and this case is built on bargaining power, not budget promises.`,
+  },
+  {
+    q: 'What happens to our schools?',
+    a: `Nothing in this plan touches school districts. City mergers and school district boundaries are separate questions under Kentucky law. Pikeville Independent Schools, Pike County Schools, and Floyd County Schools would all continue as they are. Any change to school districts would be its own separate process with its own separate decision-makers — it is not part of this proposal.`,
+  },
+  {
+    q: 'Will Coal Run Village just be swallowed by Pikeville?',
+    a: `Legally, it cannot be. Because Coal Run Village has more than 1,000 residents, Kentucky's small-city absorption statute does not apply. The only path is the contiguous-city merger statute (KRS 81.410–81.440), which requires a majority vote in each city separately — if a majority of Coal Run Village voters say no, the merger fails, period. The village holds an absolute veto. Beyond the law, merged communities routinely preserve neighborhood identity: Coal Run would remain a named place, with its history intact, the way historic neighborhoods persist inside every consolidated city.`,
+  },
+  {
+    q: 'Who actually decides all of this?',
+    a: `Voters and property owners, at every binding step. Annexations can be cancelled outright by a petition of 51% of an area's residents or property owners (KRS 81A.420, as amended in 2024). City mergers require a majority referendum vote in each affected city (KRS 81.420). The only step that doesn't require a vote is the first one — shared-services agreements — because those change no boundaries and no one's government; they're contracts between cities that elected officials approve in public meetings.`,
+  },
+  {
+    q: "Doesn't consolidation save money? Why won't you promise that?",
+    a: `Because the evidence doesn't support the promise. The most careful academic comparison of nine consolidated governments against nine similar unconsolidated ones found no systematic efficiency gains. Louisville's ten-year review found costs held flat — not slashed. Communities that sold consolidation on big savings and didn't deliver poisoned the well for decades. Our case rests on what the evidence supports: scale, unified economic development, stronger grant and bond standing, and one voice for the region.`,
+  },
+  {
+    q: 'Why now? Why not wait?',
+    a: `Because the decline is accelerating, not stabilizing. Pike County lost more people by 2020 than the state projected, and the newest state projections are steeper than the old ones. Every year of waiting means smaller budgets, thinner staff, and less leverage to negotiate good merger terms. Cooperation is cheapest while the communities still have strength to bring to the table.`,
+  },
+  {
+    q: "What's the realistic first step?",
+    a: `An interlocal shared-services agreement among Pikeville, Coal Run Village, and Prestonsburg under KRS 65.210–65.300 — available today, across county lines, with no referendum required. Start with something visible and uncontroversial: joint purchasing, shared specialized equipment, or coordinated grant applications. Prove cooperation works, publish the results, and let trust compound.`,
+  },
+  {
+    q: 'Is a city spanning two counties even legal in Kentucky?',
+    a: `Yes. Kentucky law explicitly contemplates multi-county cities — KRS 81A.415 governs how a city already lying in two counties annexes territory in a third. A Pikeville–Prestonsburg merger would first require the cities to become contiguous through years of consensual corridor growth, which is why it's Rung 4 of the plan, not Rung 1. But there is no legal wall at the Pike–Floyd county line.`,
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+---
+
+<Base
+  title="FAQ — Taxes, Schools, Identity, and Who Decides"
+  description="Honest answers about Big Sandy regional consolidation: taxes, school districts, Coal Run Village's veto, the 51% annexation petition, and why we don't promise cost savings."
+  schema={[faqSchema]}
+>
+  <div class="wrap">
+    <article class="prose">
+      <h1>Questions Everyone Asks</h1>
+      <p class="lede">
+        Straight answers, including the ones that are uncomfortable for our
+        side of the argument.
+      </p>
+
+      {faqs.map(({ q, a }) => (
+        <details class="faq-item">
+          <summary>{q}</summary>
+          <div class="answer">
+            <p>{a}</p>
+          </div>
+        </details>
+      ))}
+
+      <p>
+        Have a question we haven't answered? That's exactly what this project
+        is for — the <a href="/sources/">Sources page</a> shows our homework,
+        and the open questions we're still researching are listed there too.
+      </p>
+    </article>
+  </div>
+</Base>

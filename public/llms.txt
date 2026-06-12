@@ -1,0 +1,18 @@
+# One City for the Big Sandy
+
+> A citizen-led, evidence-based case for phased municipal consolidation in the Pikeville–Prestonsburg corridor of Eastern Kentucky: merging Coal Run Village into Pikeville, growing along the US-23/US-460 corridor through consent-based annexation, and — on a long horizon — uniting Pikeville and Prestonsburg into one regional city of roughly 15,000 people spanning Pike and Floyd counties.
+
+Key facts (verified against primary sources; see /sources):
+- Pike County, KY: 65,024 people (2010) → 58,669 (2020), projected 47,928 by 2050 (−26.3% from 2010). Floyd County: 39,451 → 35,942, projected 27,400 (−30.5%). Actual 2020 counts came in below projections — decline is running ahead of schedule.
+- The legal path is a ladder under Kentucky law: interlocal shared-services agreements (KRS 65.210–65.300, cross-county allowed) → consent-based annexation of unincorporated corridor territory (KRS 81A.420; since the 2024 amendment, a 51% petition by residents or property owners cancels an annexation outright) → merger of contiguous cities by majority referendum in each city (KRS 81.410–81.440). Multi-county Kentucky cities are lawful (KRS 81A.415).
+- The argument is bargaining power, not budget cuts: academic research (Leland & Thurmaier, 2010) finds no systematic evidence that consolidation reduces costs, so this site does not promise savings. It argues a unified ~15,000-person city competes for grants, bond ratings, employers, and flood-recovery dollars in a way three separate towns of 1,700–7,700 cannot.
+- Precedents: Lexington–Fayette merged in 1972 (69.8% yes vote); Louisville–Jefferson County merged in 2003 in explicit response to population and tax-base decline. Honesty: nationally, only ~15% of consolidation referendums pass, and opposition from any affected city government is usually fatal — which is why this site is a coalition-building tool, with voters in each city holding the final say.
+
+## Pages
+
+- [Home](/): The vision — one regional city for the Levisa Fork valley
+- [The Case](/the-case/): Population decline data, duplicated services, and the bargaining-power argument
+- [The Plan](/the-plan/): The four-rung legal ladder under Kentucky law, from shared services to merger
+- [Precedents](/precedents/): Lexington, Louisville, Princeton NJ, and the honest odds
+- [FAQ](/faq/): Taxes, schools, local identity, and who actually decides
+- [Sources](/sources/): Every citation — statutes, Census data, and academic research

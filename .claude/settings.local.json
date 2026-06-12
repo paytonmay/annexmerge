@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Workflow(deep-research)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}

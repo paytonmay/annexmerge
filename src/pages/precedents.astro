@@ -1,0 +1,136 @@
+---
+import Base from '../layouts/Base.astro';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Consolidation Precedents: Lexington, Louisville, Princeton — and the Honest Odds',
+  description:
+    'What actually happened when other communities consolidated: Kentucky successes in Lexington (1972) and Louisville (2003), the Princeton NJ merger, and the research showing most referendums fail.',
+  about: ['City-county consolidation', 'Louisville Metro', 'Lexington-Fayette', 'Municipal mergers'],
+};
+---
+
+<Base
+  title="Precedents — What Happened When Other Communities Consolidated"
+  description="Lexington merged in 1972 with a 69.8% yes vote. Louisville merged in 2003 facing the same decline we face. And nationally, ~85% of consolidation votes fail. The full honest record."
+  schema={[articleSchema]}
+>
+  <div class="wrap">
+    <article class="prose">
+      <h1>Precedents</h1>
+      <p class="lede">
+        Consolidation is rare, hard, and sometimes oversold. It has also
+        worked — twice in Kentucky. Here is the record, including the parts
+        that cut against this project.
+      </p>
+
+      <h2>Lexington–Fayette County, 1972: Kentucky's proof it can pass</h2>
+      <p>
+        In November 1972, voters in Lexington and Fayette County approved
+        merging their city and county governments by better than two to one —
+        69.8% yes. The merged government took effect January 1, 1974, was the
+        first of its kind in Kentucky, and is still operating five decades
+        later. Nobody in Lexington is campaigning to undo it.
+      </p>
+
+      <h2>Louisville–Jefferson County, 2003: the decline-driven merger</h2>
+      <p>
+        Louisville's merger is the most instructive for our corridor, because
+        the motivation was ours: leaders pursued it in response to
+        <em>"a long declining population and tax base, escalating government
+        spending, and multiple economic development organizations fighting to
+        recruit the same businesses."</em> Sound familiar?
+      </p>
+      <p>The ten-year retrospective (Abell Foundation, 2013) found:</p>
+      <ul>
+        <li>
+          Inflation-adjusted government costs <strong>did not increase</strong>
+          over the decade, and a smaller workforce (roughly 9,000 down to
+          ~8,400) maintained service levels.
+        </li>
+        <li>
+          The merger moved Louisville from the 65th- to the 18th-largest city
+          in the nation — instantly changing its standing with employers,
+          federal agencies, and bond markets. (Under the Census Bureau's
+          stricter "balance" counting convention, it ranks around 27th; either
+          way, the leap was real.)
+        </li>
+      </ul>
+      <p>
+        The honest footnotes: total personnel costs did not fall, because pay
+        harmonization offset headcount reductions, and some scholars (Savitch
+        &amp; Vogel, 2010) dispute that the merger produced net savings.
+        Louisville's lesson is not "merger saves money." It is "merger changed
+        what Louisville <em>was</em> — and what it could ask for."
+      </p>
+
+      <h2>Princeton, New Jersey, 2013: the small-scale modern example</h2>
+      <p>
+        Princeton Borough and Princeton Township — two small, adjacent
+        municipalities much closer to our scale than Louisville — merged in
+        2013 after voters approved consolidation. Reporting five years on
+        found slowed property-tax growth and improved services, and the merger
+        is broadly regarded in New Jersey as a success. It remains the example
+        most often cited for small contiguous towns merging by choice.
+      </p>
+
+      <h2>The honest odds — read this part</h2>
+      <p>
+        A site arguing <em>for</em> consolidation owes you the failure data,
+        so here it is:
+      </p>
+      <ul>
+        <li>
+          Across a century of American attempts (1902–2010), only about
+          <strong>27 of 105</strong> city–county consolidation referendums
+          passed — roughly a 15% success rate. The National League of Cities
+          puts rejection at about three-fourths of attempts.
+        </li>
+        <li>
+          Only around forty consolidated governments exist in the entire
+          country. Most communities that study the idea never even reach a
+          ballot.
+        </li>
+        <li>
+          The University of Kentucky's own scholarship on the Lexington merger
+          (W.E. Lyons) identified the killer variable:
+          <strong>if either affected government is hostile, that alone is
+          usually enough to sink the entire effort.</strong>
+        </li>
+        <li>
+          The most rigorous academic comparison — nine consolidated
+          governments matched against nine similar unconsolidated ones (Leland
+          &amp; Thurmaier, 2010) — found <strong>no systematic evidence of
+          cost savings</strong>. The same study found consolidated governments
+          consistently outperformed their comparisons on
+          <strong>economic development</strong> in the following decade,
+          though other econometric studies (including one examining Kentucky's
+          own mergers) found no significant effect. We present that finding as
+          one major study's result, not a consensus.
+        </li>
+      </ul>
+
+      <div class="callout">
+        <span class="callout-title">Why long odds shape the plan instead of ending it</span>
+        <p>
+          Every failure pattern in the research is a design input for
+          <a href="/the-plan/">our four-rung ladder</a>. Referendums fail when
+          they're rushed — so the ladder starts with years of shared services.
+          They fail when a smaller community feels swallowed — so Coal Run
+          Village holds a literal statutory veto. They fail when promised
+          savings don't materialize — so we never promise savings. The
+          communities that passed consolidation, from Lexington to Princeton,
+          did it by building the coalition first and voting second. That is
+          the entire strategy of this project: a coalition-building tool, not
+          an ambush.
+        </p>
+      </div>
+
+      <p>
+        Every claim above is cited on the <a href="/sources/">Sources page</a>,
+        including the studies that disagree with us.
+      </p>
+    </article>
+  </div>
+</Base>
