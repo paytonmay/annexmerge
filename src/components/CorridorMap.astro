@@ -18,11 +18,37 @@ const places = [
 const pathD = places
   .map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`)
   .join(' ');
+
+// Faint directional stubs: the door is open in every direction, but the
+// Pikeville–Prestonsburg spine stays the visual story.
+const branches = [
+  {
+    d: 'M 80 300 L 34 372',
+    label: 'US-23 South: Shelbiana · Millard · Elkhorn City',
+    lx: 10,
+    ly: 394,
+    anchor: 'start',
+  },
+  {
+    d: 'M 80 300 L 168 376',
+    label: 'KY-122: Robinson Creek · Virgie',
+    lx: 190,
+    ly: 394,
+    anchor: 'start',
+  },
+  {
+    d: 'M 712 72 L 772 22',
+    label: 'US-23 North: toward Paintsville',
+    lx: 790,
+    ly: 12,
+    anchor: 'end',
+  },
+];
 ---
 
 <figure class="corridor-map">
   <svg
-    viewBox="0 0 800 360"
+    viewBox="0 0 800 404"
     role="img"
     aria-labelledby="corridor-map-title corridor-map-desc"
   >
@@ -32,8 +58,32 @@ const pathD = places
     <desc id="corridor-map-desc">
       Ten communities shown as connected nodes along one valley: Pikeville,
       Coal Run Village, Broad Bottom, Harold, Betsy Layne, Stanville, Ivel,
-      Dwale, Allen, and Prestonsburg.
+      Dwale, Allen, and Prestonsburg. Faint arrows show open paths in other
+      directions: south on US-23 toward Shelbiana, Millard, and Elkhorn City,
+      down KY-122 toward Robinson Creek and Virgie, and north toward
+      Paintsville.
     </desc>
+
+    <defs>
+      <marker
+        id="branch-arrow"
+        viewBox="0 0 10 10"
+        refX="8"
+        refY="5"
+        markerWidth="7"
+        markerHeight="7"
+        orient="auto-start-reverse"
+      >
+        <path d="M 0 0 L 10 5 L 0 10 z" class="branch-head" />
+      </marker>
+    </defs>
+
+    {branches.map((b) => (
+      <g class="branch">
+        <path d={b.d} marker-end="url(#branch-arrow)" />
+        <text x={b.lx} y={b.ly} text-anchor={b.anchor}>{b.label}</text>
+      </g>
+    ))}
 
     <path class="valley" d={pathD} />
     <path class="flow" d={pathD} />
@@ -61,7 +111,8 @@ const pathD = places
   <figcaption>
     One valley, ten communities: Pikeville, Coal Run Village, Broad Bottom,
     Harold, Betsy Layne, Stanville, Ivel, Dwale, Allen, and Prestonsburg,
-    connected by US-23. Larger nodes are incorporated cities.
+    connected by US-23. Larger nodes are incorporated cities. Faint arrows
+    mark the open paths in other directions.
   </figcaption>
 </figure>
 
@@ -81,6 +132,26 @@ const pathD = places
     color: var(--ink-soft);
     margin-top: 0.5rem;
     max-width: var(--max-prose);
+  }
+
+  .branch path {
+    fill: none;
+    stroke: var(--green-600);
+    stroke-width: 2;
+    stroke-dasharray: 2 7;
+    stroke-linecap: round;
+    opacity: 0.45;
+  }
+
+  .branch-head {
+    fill: var(--green-600);
+    opacity: 0.45;
+  }
+
+  .branch text {
+    font-size: 13px;
+    fill: var(--ink-soft);
+    opacity: 0.85;
   }
 
   .valley {
